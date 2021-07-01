@@ -23,7 +23,7 @@ function render() {
     clearElement(listContainer)
     lists.forEach(function(list) {
         const item = document.createElement('li')
-        item.creatList.add('item')
+        item.classList.add('item')
         item.innerText = list.name
         listContainer.appendChild(item)
     })
