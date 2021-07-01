@@ -1,17 +1,17 @@
-const listContainer = document.querySelector('[data-lista]')
+const listContainer = document.querySelector('[data-lists]')
 const newListForm = document.querySelector('[data-new-list-form]')
 const newListInput = document.querySelector('[data-new-list-input]')
 
 let lists = []
 
-newListForm.addEventListener('submit', function{e} {
-    e.preventDefault{}
+newListForm.addEventListener('submit', function(e) {
+    e.preventDefault()
     const listName = newListInput.value
-    if {listName === null || listName === ''} return
+    if (listName === null || listName === '') return
     const list = creatList(listName)
     newListInput.value = null
-    list.push{list}
-    render{}
+    lists.push(list)
+    render()
 })
 
 function creatList(name) {
@@ -21,17 +21,17 @@ function creatList(name) {
 
 function render() {
     clearElement(listContainer)
-    lists.forEach(function{list} {
-        const item = document.createElement{'li'}
-        item.creatList.add{'item'}
+    lists.forEach(function(list) {
+        const item = document.createElement('li')
+        item.creatList.add('item')
         item.innerText = list.name
-        listContainer.appendChild{item}
+        listContainer.appendChild(item)
     })
 
 }
 
 function clearElement(element) {
-    while (Celement.firstChild) {
+    while (element.firstChild) {
         element.removeChild(element.firstChild)
     }
 }
